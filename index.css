@@ -1,15 +1,12 @@
 .poppins-regular {
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .poppins-semibold {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 .poppins-extrabold {
-  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
@@ -31,7 +28,7 @@
 .blue-bg-theme {
     background-color: #2866c2;
 }
-.ai-color {
+.ai-bg-color {
   display: inline-block;
   background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
 }
