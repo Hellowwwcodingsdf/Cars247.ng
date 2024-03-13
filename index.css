@@ -1,0 +1,43 @@
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.green-theme {
+  color: #017931;
+}
+.green-bg-theme {
+  background-color: #017931;
+}
+.blue-theme {
+  color: #2866c2;
+}
+.blue-bg-theme {
+    background-color: #2866c2;
+}
+.ai-color {
+  display: inline-block;
+  background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
+}
+.ai-color-text {
+  display: inline-block;
+  background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
+  background-clip: text;
+  color: transparent;
+}
