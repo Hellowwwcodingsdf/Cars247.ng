@@ -41,3 +41,7 @@ section {
   background-clip: text;
   color: transparent;
 }
+section.trending-cars {
+  height: 900px;
+  background-image: url('images/backgrounds/trending-cars.png');
+}
