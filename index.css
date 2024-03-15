@@ -3,6 +3,9 @@
   margin-block-start: 0;
   margin-block-end: 0;
 }
+a {
+  cursor: pointer;
+}
 a.nav-links {
   color: #0c0c0c;
 }
@@ -46,9 +49,21 @@ a.ai-color-text {
   background-clip: text;
   color: transparent;
 }
-
+.timer-color {
+  display: inline-block;
+  background-image: linear-gradient(#3D4A3E, #B40505);
+  background-clip: text;
+  color: transparent;
+}
+h5.price-top-right {
+  background-color: hsla(125, 10%, 26%, 0.7);
+  border-top-right-radius: 30px;
+}
+div.card-bottom {
+  background-color: hsla(0, 0%, 12%, 0.7);
+  margin-top: 208px;
+}
 section.trending-cars {
-  height: 900px;
   background-image: url("images/backgrounds/trending-cars.png");
 }
 .car-image-background {
