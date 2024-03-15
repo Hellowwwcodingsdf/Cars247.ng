@@ -94,6 +94,6 @@ section.about-us {
 
 @media (max-width: 900px) {
   section.about-us {
-    background-image: url('images/backgrounds/about-us-mobile.png');
+    background-image: url("images/backgrounds/about-us-mobile.png");
   }
 }
