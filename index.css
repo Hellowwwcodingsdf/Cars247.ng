@@ -44,7 +44,6 @@ a.ai-color-text {
   color: transparent;
 }
 
-
 @media (max-width: 600px) {
   .desktop-view {
     display: none;
@@ -120,4 +119,7 @@ section.trending-cars {
 }
 .link-texts {
   padding: 100px 0px 100px 50px;
+}
+section.about-us {
+  background-image: url(/images/backgrounds/about-us.png);
 }
