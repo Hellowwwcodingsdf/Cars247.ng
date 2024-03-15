@@ -101,3 +101,23 @@ section.trending-cars {
   height: 900px;
   background-image: url("images/backgrounds/trending-cars.png");
 }
+.car-image-background {
+  background-image: url("/images/backgrounds/hero.png");
+  /* height: 959px; */
+}
+.hero-text {
+  font-size: 4rem;
+}
+.link-texts a {
+  text-decoration: none;
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+}
+.get-started,
+.Ai-car-suggestions {
+  border-radius: 25px;
+}
+.link-texts {
+  padding: 100px 0px 100px 50px;
+}
