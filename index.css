@@ -41,6 +41,7 @@ section {
   background-clip: text;
   color: transparent;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -67,16 +68,7 @@ header {
   gap: 30px;
   white-space: nowrap;
 }
-/* .mobile-view ul {
-  list-style: none;
-  gap: 30px;
-  white-space: nowrap;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  background: #2866c2;
-} */
+
 .mobile-view {
   display: none;
 }
@@ -133,4 +125,9 @@ header {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+section.trending-cars {
+  height: 900px;
+  background-image: url('images/backgrounds/trending-cars.png');
 }
