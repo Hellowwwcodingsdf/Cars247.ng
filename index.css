@@ -47,58 +47,6 @@ a.ai-color-text {
   color: transparent;
 }
 
-@media (max-width: 600px) {
-  .desktop-view {
-    display: none;
-  }
-}
-.dropdown-btn {
-  display: none;
-}
-@media (max-width: 600px) {
-  .dropdown-btn {
-    display: block;
-  }
-}
-.mobile-nav {
-  /* background: #333; */
-  padding: 10px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #555;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 section.trending-cars {
   height: 900px;
   background-image: url("images/backgrounds/trending-cars.png");
@@ -127,4 +75,10 @@ section.trending-cars {
 }
 section.about-us {
   background-image: url(/images/backgrounds/about-us.png);
+}
+
+@media (max-width: 900px) {
+  section.about-us {
+    background-image: url('images/backgrounds/about-us-mobile.png');
+  }
 }
