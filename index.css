@@ -51,7 +51,7 @@ a.ai-color-text {
 }
 .timer-color {
   display: inline-block;
-  background-image: linear-gradient(#3D4A3E, #B40505);
+  background-image: linear-gradient(#3d4a3e, #b40505);
   background-clip: text;
   color: transparent;
 }
@@ -96,4 +96,25 @@ section.about-us {
   section.about-us {
     background-image: url("images/backgrounds/about-us-mobile.png");
   }
+}
+form {
+  text-align: center;
+}
+input[type="text"],
+input[type="password"] {
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+input[type="submit"] {
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #017931;
+  color: #fff;
+  cursor: pointer;
 }
