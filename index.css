@@ -122,7 +122,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-
 footer {
   background-image: url("images/backgrounds/footer.png");
 }
@@ -130,9 +129,9 @@ footer {
 @media screen and (max-width: 900px) {
   input[type="text"],
   input[type="password"] {
-  width: 75%;
+    width: 90%;
   }
   input[type="submit"] {
-    width: 75%;
+    width: 80%;
   }
 }
