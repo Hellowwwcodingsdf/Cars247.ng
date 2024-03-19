@@ -99,10 +99,12 @@ form {
 }
 input[type="text"],
 input[type="password"] {
-  width: 25%;
-  margin: 5px;
-  border-radius: 30px;
+  border-radius: 15px;
   border: 1px solid #ccc;
+}
+
+div.input-fields {
+  width: 25%;
 }
 
 input[type="submit"] {
@@ -128,10 +130,9 @@ footer {
     background-image: url("images/backgrounds/footer-mobile.png");
     background-size: cover;
   }
-  input[type="text"],
-  input[type="password"] {
-    width: 90%;
-  }
+div.input-fields {
+  width: 90%;
+}
   input[type="submit"] {
     width: 80%;
   }
