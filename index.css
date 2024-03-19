@@ -94,12 +94,6 @@ section.trending-cars {
 section.about-us {
   background-image: url(/images/backgrounds/about-us.png);
 }
-
-@media (max-width: 900px) {
-  section.about-us {
-    background-image: url("images/backgrounds/about-us-mobile.png");
-  }
-}
 form {
   text-align: center;
 }
@@ -127,6 +121,13 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+  section.about-us {
+    background-image: url("images/backgrounds/about-us-mobile.png");
+  }
+  footer {
+    background-image: url("images/backgrounds/footer-mobile.png");
+    background-size: cover;
+  }
   input[type="text"],
   input[type="password"] {
     width: 90%;
