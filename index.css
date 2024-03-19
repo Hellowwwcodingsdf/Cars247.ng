@@ -119,3 +119,7 @@ input[type="submit"] {
   color: #fff;
   cursor: pointer;
 }
+
+footer {
+  background-image: url('images/backgrounds/footer.png');
+}
