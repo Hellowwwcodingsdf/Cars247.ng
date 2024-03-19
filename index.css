@@ -104,7 +104,12 @@ input[type="password"] {
 }
 
 div.input-fields {
-  width: 25%;
+  width: 75%;
+}
+
+img.login-image {
+  position: relative;
+  top: 20%;
 }
 
 input[type="submit"] {
