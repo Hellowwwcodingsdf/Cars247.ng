@@ -9,7 +9,8 @@ closeNavBtn.addEventListener("click", () => {
     sideBar.classList.add("col-3");
     sideBar.style.width = "auto";
     sideBar2.classList.remove("col-11");
-    sideBar2.classList.add("col-9");
+      sideBar2.classList.add("col-9");
+      sideBar2.style.width = "75%"
     for (var i = 0; i < sideBarElements.length; i++) {
       sideBarElements[i].style.display = "inline-block";
     }
