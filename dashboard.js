@@ -28,4 +28,27 @@ closeNavBtn.addEventListener("click", () => {
 //On mobile view, navbar should show when button is clicked
 let navLogoBlack = document.getElementById("nav-logo-black");
 let navBtnBlack = document.getElementById("navBtnBlack");
+let xMark = document.getElementById("xMark");
 
+//Open Navbar overlay when the nav button is clicked in mobile
+navBtnBlack.addEventListener("click", () => {
+  sideBar.classList.remove("d-none");
+  sideBar.style.position = "absolute";
+  sideBar.classList.remove("col-3");
+  sideBar.classList.add("w-100", "shadow-lg");
+  sideBar.style.backgroundColor = "rgba(61, 74, 62, 0.8)";
+  sideBar.style.backdropFilter = "blur(15px)";
+  xMark.classList.remove("d-none");
+  closeNavBtn.style.display = "none";
+});
+//Close Navbar overlay when the x mark is clicked in mobile
+xMark.addEventListener("click", () => {
+  sideBar.classList.add("d-none");
+  sideBar.style.position = "";
+  sideBar.classList.add("col-3");
+  sideBar.classList.remove("w-100", "shadow-lg");
+  sideBar.style.backgroundColor = "rgb(61, 74, 62)";
+  sideBar.style.backdropFilter = "";
+  xMark.classList.add("d-none");
+  closeNavBtn.style.display = "inline-block";
+});
