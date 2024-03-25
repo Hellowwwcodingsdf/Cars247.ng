@@ -30,6 +30,9 @@ section {
 .green-bg-theme {
   background-color: #017931;
 }
+.dark-green-theme {
+  background-color: #3d4a3e;
+}
 .bg-grey {
   background-color: #f5f5f5;
 }
@@ -97,7 +100,8 @@ section.about-us {
 form {
   text-align: center;
 }
-input, textarea {
+input,
+textarea {
   border-radius: 15px;
   border: 1px solid #ccc;
 }
@@ -125,6 +129,16 @@ input[type="submit"] {
 footer {
   background-image: url("images/backgrounds/footer.png");
 }
+a.nav-links-2:hover {
+  background-color: rgba(160, 175, 161, 0.3);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+a.active-nav-link {
+  background-color: rgba(160, 175, 161, 0.3);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
 
 @media screen and (max-width: 900px) {
   section.about-us {
@@ -134,9 +148,9 @@ footer {
     background-image: url("images/backgrounds/footer-mobile.png");
     background-size: cover;
   }
-div.input-fields {
-  width: 90%;
-}
+  div.input-fields {
+    width: 90%;
+  }
   input[type="submit"] {
     width: 80%;
   }
