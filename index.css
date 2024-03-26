@@ -108,7 +108,9 @@ textarea {
   border-radius: 15px;
   border: 1px solid #ccc;
 }
-
+div.nav-elements {
+  padding: 100px 0;
+}
 div.input-fields {
   width: 75%;
 }

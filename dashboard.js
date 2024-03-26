@@ -9,8 +9,8 @@ closeNavBtn.addEventListener("click", () => {
     sideBar.classList.add("col-3");
     sideBar.style.width = "auto";
     sideBar2.classList.remove("col-11");
-      sideBar2.classList.add("col-9");
-      sideBar2.style.width = "75%"
+    sideBar2.classList.add("col-9");
+    sideBar2.style.width = "75%";
     for (var i = 0; i < sideBarElements.length; i++) {
       sideBarElements[i].style.display = "inline-block";
     }
@@ -53,3 +53,27 @@ xMark.addEventListener("click", () => {
   xMark.classList.add("d-none");
   closeNavBtn.style.display = "inline-block";
 });
+
+//Change the active nav link when either is clicked
+let dashboardLink = document.getElementById("dashboardLink");
+let salesHistoryLink = document.getElementById("salesHistoryLink");
+console.log(salesHistoryLink)
+let carInventoryLink = document.getElementById("carInventoryLink");
+dashboardLink.addEventListener("click", () => {
+  dashboardLink.classList.add("active-nav-link");
+    console.log("done");
+
+  salesHistoryLink.classList.remove("active-nav-link");
+  carInventoryLink.classList.remove("active-nav-link");
+});
+salesHistoryLink.addEventListener("click", () => {
+  salesHistoryLink.classList.add("active-nav-link");
+  dashboardLink.classList.remove("active-nav-link");
+  carInventoryLink.classList.remove("active-nav-link");
+});
+carInventoryLink.addEventListener("click", () => {
+  carInventoryLink.classList.add("active-nav-link");
+  dashboardLink.classList.remove("active-nav-link");
+  salesHistoryLink.classList.remove("active-nav-link");
+});
+
