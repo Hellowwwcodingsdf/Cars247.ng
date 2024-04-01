@@ -48,16 +48,6 @@ section {
 .blue-bg-theme {
   background-color: #2866c2;
 }
-.ai-bg-color {
-  display: inline-block;
-  background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
-}
-a.ai-color-text {
-  display: inline-block;
-  background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
-  background-clip: text;
-  color: transparent;
-}
 .timer-color {
   display: inline-block;
   background-image: linear-gradient(#3d4a3e, #b40505);
@@ -83,10 +73,10 @@ div.card-bottom {
   margin-top: 208px;
 }
 section.trending-cars {
-  background-image: url("images/backgrounds/trending-cars.png");
+  background-image: url("../images/backgrounds/trending-cars.png");
 }
 .car-image-background {
-  background-image: url("/images/backgrounds/hero.png");
+  background-image: url("../images/backgrounds/hero.png");
   background-attachment: fixed;
 }
 .hero-text {
@@ -108,7 +98,7 @@ section.trending-cars {
   padding-bottom: 100px;
 }
 section.about-us {
-  background-image: url(/images/backgrounds/about-us.png);
+  background-image: url(../images/backgrounds/about-us.png);
 }
 form {
   text-align: center;
@@ -142,7 +132,7 @@ input[type="submit"] {
 }
 
 footer {
-  background-image: url("images/backgrounds/footer.png");
+  background-image: url("../images/backgrounds/footer.png");
 }
 a.nav-links-2:hover {
   background-color: rgba(160, 175, 161, 0.3);
@@ -159,10 +149,10 @@ div#nav-logo-black {
 }
 @media screen and (max-width: 900px) {
   section.about-us {
-    background-image: url("images/backgrounds/about-us-mobile.png");
+    background-image: url("../images/backgrounds/about-us-mobile.png");
   }
   footer {
-    background-image: url("images/backgrounds/footer-mobile.png");
+    background-image: url("../images/backgrounds/footer-mobile.png");
     background-size: cover;
   }
   div.input-fields {
