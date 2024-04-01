@@ -9,6 +9,17 @@ let carInventoryLink = document.getElementById("carInventoryLink");
 let navLogoBlack = document.getElementById("nav-logo-black");
 let navBtnBlack = document.getElementById("navBtnBlack");
 let xMark = document.getElementById("xMark");
+let imgDropdown = document.getElementById("imgDropdown");
+let dropdownMenu = document.getElementById("dropdownMenu");
+
+//Bring out dropdown when profile picture is clicked
+imgDropdown.addEventListener("click", () => {
+  if (dropdownMenu.style.display === "none") {
+    dropdownMenu.style.display = "inline-block";
+  } else {
+    dropdownMenu.style.display = "none";
+  }
+});
 
 //Navbar should minimize when the button is clicked and maximize if it is clicked again
 closeNavBtn.addEventListener("click", () => {

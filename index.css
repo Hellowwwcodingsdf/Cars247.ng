@@ -67,6 +67,16 @@ a.ai-color-text {
 h5.price-top-right {
   background-color: hsla(125, 10%, 26%, 0.7);
   border-top-right-radius: 30px;
+  position: relative;
+  right: 0;
+}
+div#dropdownMenu {
+  position: absolute;
+  right: 45px;
+  top: 70px;
+  z-index: 999999;
+  text-align: right;
+  display: none;
 }
 div.card-bottom {
   background-color: hsla(0, 0%, 12%, 0.7);
