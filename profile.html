@@ -22,47 +22,59 @@
   <body>
     <div class="row m-0">
       <div
-        class="d-none d-lg-block col-3 dark-green-theme text-white ps-0 pe-2 h-100"
+        class="d-none d-lg-block col-3 dark-green-theme text-white ps-0 pe-2"
         id="sidebar"
       >
-        <div class="nav-logo fs-3 ps-4 py-4">
-          <i
-            class="fa-solid fa-bars-staggered"
-            role="button"
-            id="close-nav-btn"
-          ></i>
-          <a href="index.html" class="sideBarElement text-decoration-none">
-            <img
-              src="images/dashboard-logo.png"
-              alt=""
-              class="ps-3"
-              height="35px"
-            />
-          </a>
-          <i class="fa-solid fa-xmark fs-2 float-end d-none pe-4" id="xMark"></i>
-        </div>
-        <div class="nav-elements py-5">
-          <a
-            role="button"
-            class="nav-links-2 text-decoration-none text-white active-nav-link fs-5 d-block py-2 my-4"
-          >
-            <i class="fa-solid fa-bars-staggered px-4"></i>
-            <span class="sideBarElement">Dashboard</span>
-          </a>
-          <a
-            role="button"
-            class="nav-links text-decoration-none text-white fs-5 d-block py-2 my-4"
-          >
-            <i class="fa-solid fa-business-time ps-4 pe-3"></i>
-            <span class="sideBarElement">Sales History</span>
-          </a>
-          <a
-            role="button"
-            class="nav-links text-decoration-none text-white fs-5 d-block py-2 my-4"
-          >
-            <i class="fa-regular fa-clipboard ps-4 pe-4"></i>
-            <span class="sideBarElement">Car Inventory</span>
-          </a>
+        <div class="sticky-top">
+          <div class="nav-logo fs-3 ps-4 py-5 py-lg-4">
+            <i
+              class="fa-solid fa-bars-staggered"
+              role="button"
+              id="close-nav-btn"
+            ></i>
+            <a href="index.html" class="sideBarElement text-decoration-none">
+              <img
+                src="images/dashboard-logo.png"
+                alt=""
+                class="ps-3"
+                height="35px"
+              />
+            </a>
+            <i
+              class="fa-solid fa-xmark fs-2 float-end d-none pe-4 pointer-event"
+              role="button"
+              id="xMark"
+            ></i>
+          </div>
+          <div class="nav-elements">
+            <a
+            href="#sidebar2"
+              role="button"
+              class="nav-links-2 active-nav-link text-decoration-none text-white fs-5 d-block py-2 my-4"
+              id="dashboardLink"
+            >
+              <i class="fa-solid fa-bars-staggered px-4"></i>
+              <span class="sideBarElement">Dashboard</span>
+            </a>
+            <a
+            href="#salesHistory"
+              role="button"
+              class="nav-links text-decoration-none text-white fs-5 d-block py-2 my-4"
+              id="salesHistoryLink"
+            >
+              <i class="fa-solid fa-business-time ps-4 pe-3"></i>
+              <span class="sideBarElement">Sales History</span>
+            </a>
+            <a
+            href="#carInventory"
+              role="button"
+              class="nav-links text-decoration-none text-white fs-5 d-block py-2 my-4"
+              id="carInventoryLink"
+            >
+              <i class="fa-regular fa-clipboard ps-4 pe-4"></i>
+              <span class="sideBarElement">Car Inventory</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="col-12 col-lg-9 px-4 px-lg-5 pt-3" id="sidebar2">
@@ -85,30 +97,136 @@
               />
             </a>
           </div>
-          <img src="images/profile-picture.png" alt="" height="50px" class="float-end" />
+          <div class="dropdown">
+            <img
+              src="images/profile-picture.png"
+              alt=""
+              height="50px"
+              class="float-end dropdown-toggle"
+            />
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Edit Profile</a>
+              <a href="" class="dropdown-item">Log out</a>
+            </div>
+          </div>
         </div>
-        <h1 class="poppins-semibold fs-3 pt-4">Welcome Back, <span class="green-theme" id="customer-name">Jane</span></h1>
-        <div class="row m-0 mt-4 rounded-top-5 rounded-bottom-5 px-4 pt-3 pb-4 justify-content-between" style="background-image: url('images/backgrounds/cars-sold-card.png');">
+        <h1 class="poppins-semibold fs-3 pt-4">
+          Welcome Back, <span class="green-theme" id="customer-name">Jane</span>
+        </h1>
+        <div
+          class="row m-0 mt-4 rounded-top-5 rounded-bottom-5 px-4 pt-3 pb-4 justify-content-between"
+          style="background-image: url('images/backgrounds/cars-sold-card.png')"
+        >
           <p class="text-white">Retail Statistics</p>
           <div class="col-12 col-md-4 mt-3 text-center text-white">
-            <h1 class="blue-light-theme" style="font-size: 50px"><i class="fa-solid fa-business-time" aria-hidden="true"></i></h1>
-            <h1 class="poppins-semibold mb-0" style="font-size: 55px;">289</h1>
+            <h1 class="blue-light-theme" style="font-size: 50px">
+              <i class="fa-solid fa-business-time" aria-hidden="true"></i>
+            </h1>
+            <h1 class="poppins-semibold mb-0" style="font-size: 55px">289</h1>
             <h4 class="poppins-semibold mb-0">Cars Sold</h4>
           </div>
           <div class="col-12 col-md-4 mt-3 text-center text-white">
-            <h1 class="blue-light-theme" style="font-size: 50px"><i class="fa-regular fa-clipboard"></i></h1>
-            <h1 class="poppins-semibold mb-0" style="font-size: 55px;">020</h1>
+            <h1 class="blue-light-theme" style="font-size: 50px">
+              <i class="fa-regular fa-clipboard"></i>
+            </h1>
+            <h1 class="poppins-semibold mb-0" style="font-size: 55px">020</h1>
             <h4 class="poppins-semibold mb-0">Available Cars</h4>
           </div>
           <div class="col-12 col-md-4 mt-3 text-center text-white">
-            <h1 class="blue-light-theme" style="font-size: 50px"><i class="fa-regular fa-clock"></i></h1>
-            <h1 class="poppins-semibold mb-0" style="font-size: 55px;">005</h1>
+            <h1 class="blue-light-theme" style="font-size: 50px">
+              <i class="fa-regular fa-clock"></i>
+            </h1>
+            <h1 class="poppins-semibold mb-0" style="font-size: 55px">005</h1>
             <h4 class="poppins-semibold mb-0">Ongoing Sales</h4>
           </div>
         </div>
-        
+        <h5 class="grey-theme poppins-semibold my-4">Quick Actions</h5>
+        <div class="quick-action-buttons">
+          <a
+            role="button"
+            id="listCarBtn"
+            class="d-inline-block py-2 px-3 poppins-regular green-bg-theme text-white text-decoration-none rounded-5 mb-3 mb-lg-0"
+            >List New Car</a
+          >
+          <a
+            role="button"
+            id="editCarInventory"
+            class="d-inline-block ms-2 py-2 px-3 poppins-regular blue-bg-theme text-white text-decoration-none rounded-5"
+            >Edit Car Inventory</a
+          >
+        </div>
+        <div id="salesHistory">
+          <h5 class="grey-theme poppins-semibold mt-5">Sales History</h5>
+          <table class="text-center w-100">
+            <tr>
+              <th class="pb-2">No</th>
+              <th class="pb-2">Car Name</th>
+              <th class="pb-2">Buyer Name</th>
+              <th class="pb-2">Cars Sold</th>
+              <th class="pb-2">Date</th>
+            </tr>
+            <tr>
+              <td class="pb-2">1.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">2.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">3.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">3.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">4.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">5.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">6.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+            <tr>
+              <td class="pb-2">7.</td>
+              <td class="pb-2">Lexus LX570</td>
+              <td class="pb-2">Archimedes Busayo</td>
+              <td class="pb-2">100</td>
+              <td class="pb-2">12/12/2024</td>
+            </tr>
+          </table>
+        </div>
+        <div id="carInventory" style="height: 1000px;">
+
+        </div>
       </div>
-      
     </div>
 
     <script src="dashboard.js"></script>
