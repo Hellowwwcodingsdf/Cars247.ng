@@ -43,20 +43,10 @@ section {
   color: #2866c2;
 }
 .blue-light-theme {
-  color: #4B8CEC;
+  color: #4b8cec;
 }
 .blue-bg-theme {
   background-color: #2866c2;
-}
-.ai-bg-color {
-  display: inline-block;
-  background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
-}
-a.ai-color-text {
-  display: inline-block;
-  background-image: linear-gradient(#a890fe, #c28fd2, #b68fe5, #a890fe);
-  background-clip: text;
-  color: transparent;
 }
 .timer-color {
   display: inline-block;
@@ -67,16 +57,26 @@ a.ai-color-text {
 h5.price-top-right {
   background-color: hsla(125, 10%, 26%, 0.7);
   border-top-right-radius: 30px;
+  position: relative;
+  right: 0;
+}
+div#dropdownMenu {
+  position: absolute;
+  right: 45px;
+  top: 70px;
+  z-index: 999999;
+  text-align: right;
+  display: none;
 }
 div.card-bottom {
   background-color: hsla(0, 0%, 12%, 0.7);
   margin-top: 208px;
 }
 section.trending-cars {
-  background-image: url("images/backgrounds/trending-cars.png");
+  background-image: url("../images/backgrounds/trending-cars.png");
 }
 .car-image-background {
-  background-image: url("/images/backgrounds/hero.png");
+  background-image: url("../images/backgrounds/hero.png");
   background-attachment: fixed;
 }
 .hero-text {
@@ -98,7 +98,7 @@ section.trending-cars {
   padding-bottom: 100px;
 }
 section.about-us {
-  background-image: url(/images/backgrounds/about-us.png);
+  background-image: url(../images/backgrounds/about-us.png);
 }
 form {
   text-align: center;
@@ -132,7 +132,7 @@ input[type="submit"] {
 }
 
 footer {
-  background-image: url("images/backgrounds/footer.png");
+  background-image: url("../images/backgrounds/footer.png");
 }
 a.nav-links-2:hover {
   background-color: rgba(160, 175, 161, 0.3);
@@ -144,13 +144,15 @@ a.active-nav-link {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-
+div#nav-logo-black {
+  background-color: white;
+}
 @media screen and (max-width: 900px) {
   section.about-us {
-    background-image: url("images/backgrounds/about-us-mobile.png");
+    background-image: url("../images/backgrounds/about-us-mobile.png");
   }
   footer {
-    background-image: url("images/backgrounds/footer-mobile.png");
+    background-image: url("../images/backgrounds/footer-mobile.png");
     background-size: cover;
   }
   div.input-fields {
