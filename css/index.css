@@ -39,6 +39,9 @@ section {
 .grey-theme {
   color: gray;
 }
+.grey-bg-theme {
+  background-color: grey;
+}
 .blue-theme {
   color: #2866c2;
 }
@@ -119,7 +122,6 @@ img.login-image {
   position: relative;
   top: 20%;
 }
-
 input[type="submit"] {
   width: 20%;
   padding: 10px;
@@ -130,7 +132,6 @@ input[type="submit"] {
   color: #fff;
   cursor: pointer;
 }
-
 footer {
   background-image: url("../images/backgrounds/footer.png");
 }
@@ -147,6 +148,17 @@ a.active-nav-link {
 div#nav-logo-black {
   background-color: white;
 }
+div#forgotPassModal {
+  position: absolute;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 900px) {
   section.about-us {
     background-image: url("../images/backgrounds/about-us-mobile.png");
