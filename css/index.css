@@ -48,6 +48,11 @@ section {
 .blue-light-theme {
   color: #4b8cec;
 }
+.green-light-bg {
+  background-color: #00FF66 !important;
+  color: black !important;
+}
+
 .blue-bg-theme {
   background-color: #2866c2;
 }
@@ -73,10 +78,18 @@ div#dropdownMenu {
 }
 div.card-bottom {
   background-color: hsla(0, 0%, 12%, 0.7);
+  margin-top: 110px;
+}
+div.trending-card-bottom {
+  background-color: hsla(0, 0%, 12%, 0.7);
   margin-top: 208px;
 }
 section.trending-cars {
   background-image: url("../images/backgrounds/trending-cars.png");
+}
+.bg-illustrated {
+  background-image: url('../images/backgrounds/cars-sold-card.png');
+  background-size: cover;
 }
 .car-image-background {
   background-image: url("../images/backgrounds/hero.png");
@@ -91,10 +104,6 @@ section.trending-cars {
   padding: 10px;
   margin-right: 10px;
   color: white;
-}
-.get-started,
-.Ai-car-suggestions {
-  border-radius: 25px;
 }
 .link-texts {
   padding-top: 100px;
