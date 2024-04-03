@@ -166,9 +166,14 @@ div#forgotPassModal {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
   display: flex;
-
   align-items: center;
   justify-content: center;
+}
+div.carInfoModal {
+  position: absolute;
+  min-height: 100vh;
+  background-color: #ffffff;
+  backdrop-filter: blur(3px);
 }
 
 @media screen and (max-width: 900px) {
