@@ -22,5 +22,5 @@ carInfoBtn.forEach((item) => {
   item.addEventListener("click", openCarModal);
 });
 
-const data = fetch(carsApi)
+const data = JSON.parse(fetch(carsApi))
 console.log(data)
