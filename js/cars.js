@@ -22,21 +22,23 @@ carInfoBtn.forEach((item) => {
   item.addEventListener("click", openCarModal);
 });
 
-try {
-  const response = await fetch(carsApi, {
-    method: "GET",
-    mode: "no-cors",
-    headers: {
-      Accept: "*/*",
-    },
-  });
-  if (!response.ok) {
-    throw new Error("Unable to connect to API");
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch(carsApi, {
+      method: "GET",
+      mode: "no-cors",
+      headers: {
+        Accept: "*/*",
+      },
+    });
+    if (!response.ok) {
+      throw new Error("Unable to connect to API");
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (err) {
+    alert("Unable fetch file. Check internet connection");
+    console.error(err);
   }
-  const data = await response.json();
   console.log(data);
-} catch (err) {
-  alert("Unable fetch file. Check internet connection");
-  console.error(err);
-}
-console.log(data);
+});
