@@ -45,26 +45,32 @@
         class="nav d-lg-inline-block float-lg-end pt-2 pt-lg-0 border-bottom-1 text-center"
         id="navBar"
       >
-        <a
-          href="index.html"
-          class="nav-links d-block d-lg-inline-block py-2 py-lg-1 pe-lg-4 text-decoration-none"
-          >Home</a
+        <div
+          class="dropdown nav-links d-block d-lg-inline-block py-2 py-lg-1 pe-lg-4 text-decoration-none"
         >
-        <a
-          href="index.html#about-us"
-          class="nav-links d-block d-lg-inline-block py-2 py-lg-1 pe-lg-4 text-decoration-none"
-          >About Us</a
-        >
-        <a
-          href="index.html#trending-cars"
-          class="nav-links d-block d-lg-inline-block py-2 py-lg-1 pe-lg-4 text-decoration-none"
-          >Trending Cars</a
-        >
-        <a
-          href="index.html#contact-us"
-          class="nav-links d-block d-lg-inline-block py-2 py-lg-1 pe-lg-4 text-decoration-none"
-          >Contact Us</a
-        >
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <a role="button"
+              ><i class="fa fa-cart-plus" aria-hidden="true"></i>(3)</a
+            >
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">LEXUS LX570</button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">LEXUS LX570</button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">LEXUS LX570</button>
+            </li>
+          </ul>
+        </div>
+
         <a
           href="login.html"
           class="nav-links text-primary poppins-semibold d-block d-lg-inline-block py-2 py-lg-1 pe-lg-2 text-decoration-none"
@@ -75,6 +81,17 @@
           class="nav-links text-primary poppins-semibold d-block d-lg-inline-block py-2 py-lg-1 text-decoration-none"
           >Sign up</a
         >
+      </div>
+      <div class="px-4 pt-1 d-none" id="carInfoModal">
+        <div class="py-3">
+          <div>
+            <i
+              class="d-block fa-solid fa-xmark fs-2 text-end pb-2 pe-3 pointer-event"
+              role="button"
+              id="carModalClose"
+            ></i>
+          </div>
+        </div>
       </div>
     </header>
     <div id="carsBody">
