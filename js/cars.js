@@ -3,6 +3,7 @@ let carModalClose = document.getElementById("carModalClose");
 let carInfoBtn = document.querySelectorAll(".seeCarInfo");
 let carsBody = document.getElementById("carsBody");
 let carsNav = document.getElementById("carsNav");
+const carsApi = "https://localhost:7116/api/Cars";
 
 carModalClose.addEventListener("click", () => {
   carInfoModal.classList.add("d-none");
@@ -20,3 +21,6 @@ const openCarModal = () => {
 carInfoBtn.forEach((item) => {
   item.addEventListener("click", openCarModal);
 });
+
+const data = fetch(carsApi)
+console.log(data)
