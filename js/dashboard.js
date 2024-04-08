@@ -1,26 +1,3 @@
-// import {
-//   closeNavBtn,
-//   sideBar,
-//   dashboard,
-//   sideBarElements,
-//   dashboardNavLinks,
-//   dashboardLink,
-//   salesHistoryLink,
-//   carInventoryLink,
-//   navLogoBlack,
-//   navBtnBlack,
-//   xMark,
-//   imgDropdown,
-//   dropdownMenu,
-//   listCarBtn,
-//   editCarsBtn,
-//   listNewCarModal,
-//   editCarsModal,
-//   dashy,
-//   editCarForm,
-//   editCar1,
-// } from "./variables.js";
-
 let closeNavBtn = document.getElementById("close-nav-btn");
 let sideBar = document.getElementById("sidebar");
 let dashboard = document.getElementById("dashboard");
