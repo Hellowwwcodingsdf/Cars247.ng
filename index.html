@@ -396,13 +396,15 @@
       </h1>
       <div class="row m-0">
         <div class="col-12 col-lg-6 ps-0">
-          <form action="" class="mt-3 text-start" netlify>
+          <form action="https://formspree.io/f/mzbnkeaw" method="post" class="mt-3 text-start" id="contactUsForm" netlify>
             <label for="" class="fs-5 poppins-regular">First name</label>
             <input
               type="text"
               name="first-name"
               class="d-block w-100 rounded-3 px-3 py-2"
               placeholder="Enter your first name"
+              autocomplete="given-name"
+              required
             />
             <label for="" class="fs-5 poppins-regular mt-3"
               >Email Address</label
@@ -412,6 +414,8 @@
               name="email-address"
               class="d-block w-100 rounded-3 px-3 py-2"
               placeholder="Enter your Email Address"
+              autocomplete="email"
+              required
             />
             <label for="" class="fs-5 poppins-regular mt-3">Phone No</label>
             <input
@@ -419,6 +423,8 @@
               class="d-block w-100 rounded-3 px-3 py-2"
               name="phone"
               placeholder="Enter your Phone number"
+              autocomplete="mobile"
+              required
             />
             <label for="" class="fs-5 poppins-regular mt-3">Your Message</label>
             <textarea
@@ -427,14 +433,9 @@
               class="w-100 rounded-3 border-1 px-3 py-2"
               rows="6"
               placeholder="Enter your message for us"
+              required
             ></textarea>
-            <div class="text-center">
-              <h4
-                class="blue-bg-theme text-white py-2 rounded-3 d-inline-block w-100 text-center mt-5"
-              >
-                Submit Message
-              </h4>
-            </div>
+            <input type="submit" value="Submit Message" class="blue-bg-theme text-white py-2 rounded-3 d-inline-block w-100 text-center mt-3 fs-5">
           </form>
         </div>
         <div class="col-12 col-lg-6">

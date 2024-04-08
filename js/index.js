@@ -1,4 +1,6 @@
 const navBtn = document.getElementById("navBtn");
+const contactUsForm = document.getElementById("contactUsForm")
+
 navBtn.style.cursor = "pointer";
 let navBar = document.getElementById("navBar");
 navBar.style.display = "none";
