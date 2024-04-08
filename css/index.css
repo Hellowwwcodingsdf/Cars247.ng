@@ -6,8 +6,14 @@
 a {
   cursor: pointer;
 }
+a:hover {
+  opacity: 0.8;
+}
 a.nav-links {
   color: #0c0c0c;
+}
+textarea {
+  text-indent: 0;
 }
 section {
   padding: 50px;

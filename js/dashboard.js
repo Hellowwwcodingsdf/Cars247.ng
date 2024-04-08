@@ -1,3 +1,26 @@
+// import {
+//   closeNavBtn,
+//   sideBar,
+//   dashboard,
+//   sideBarElements,
+//   dashboardNavLinks,
+//   dashboardLink,
+//   salesHistoryLink,
+//   carInventoryLink,
+//   navLogoBlack,
+//   navBtnBlack,
+//   xMark,
+//   imgDropdown,
+//   dropdownMenu,
+//   listCarBtn,
+//   editCarsBtn,
+//   listNewCarModal,
+//   editCarsModal,
+//   dashy,
+//   editCarForm,
+//   editCar1,
+// } from "./variables.js";
+
 let closeNavBtn = document.getElementById("close-nav-btn");
 let sideBar = document.getElementById("sidebar");
 let dashboard = document.getElementById("dashboard");
@@ -11,6 +34,12 @@ let navBtnBlack = document.getElementById("navBtnBlack");
 let xMark = document.getElementById("xMark");
 let imgDropdown = document.getElementById("imgDropdown");
 let dropdownMenu = document.getElementById("dropdownMenu");
+let listCarBtn = document.getElementById("listCarBtn");
+let editCarsBtn = document.getElementById("editCarInventory");
+let listNewCarModal = document.getElementById("listNewCarModal");
+let editCarsModal = document.getElementById("editCarsModal");
+let dashy = document.getElementById("dashy");
+let editCar1 = document.getElementById("editCar1");
 
 //Bring out dropdown when profile picture is clicked
 imgDropdown.addEventListener("click", () => {
@@ -77,6 +106,9 @@ dashboardLink.addEventListener("click", () => {
   dashboardLink.classList.add("active-nav-link");
   sideBar.classList.add("d-none");
   navLogoBlack.classList.add("sticky-top");
+  dashy.classList.remove("d-none");
+  listNewCarModal.classList.add("d-none");
+  editCarsModal.classList.add("d-none");
 });
 salesHistoryLink.addEventListener("click", () => {
   dashboardNavLinks.forEach((link) => {
@@ -85,6 +117,9 @@ salesHistoryLink.addEventListener("click", () => {
   salesHistoryLink.classList.add("active-nav-link");
   sideBar.classList.add("d-none");
   navLogoBlack.classList.add("sticky-top");
+  dashy.classList.remove("d-none");
+  listNewCarModal.classList.add("d-none");
+  editCarsModal.classList.add("d-none");
 });
 carInventoryLink.addEventListener("click", () => {
   dashboardNavLinks.forEach((link) => {
@@ -93,6 +128,9 @@ carInventoryLink.addEventListener("click", () => {
   carInventoryLink.classList.add("active-nav-link");
   sideBar.classList.add("d-none");
   navLogoBlack.classList.add("sticky-top");
+  dashy.classList.remove("d-none");
+  listNewCarModal.classList.add("d-none");
+  editCarsModal.classList.add("d-none");
 });
 
 //On scrolling the page, the highlighted link should be the one for the section in view
@@ -120,3 +158,114 @@ window.addEventListener("scroll", () => {
     dashboardLink.classList.add("active-nav-link");
   }
 });
+
+listCarBtn.addEventListener("click", () => {
+  listNewCarModal.classList.remove("d-none");
+  dashy.classList.add("d-none");
+});
+
+editCarsBtn.addEventListener("click", () => {
+  editCarsModal.classList.remove("d-none");
+  dashy.classList.add("d-none");
+});
+
+function appendFormToRow(rowId) {
+  const row = document.getElementById(`carRow${rowId}`);
+  document.querySelectorAll(".editCarForm").forEach((form) => {
+    form.remove();
+  });
+  const formHTML = `
+              <tr>
+                <td colspan="6" class="w-100">
+                  <form class="editCarForm" id="editCarForm${rowId}" data-row-id="${rowId}">
+                    <div class="text-start">
+                      <div class="editCarFormInput d-inline-block mx-1">
+                        <label for="carName${rowId}">Name:</label>
+                        <br />
+                        <input
+                          type="text"
+                          placeholder="Lexus LX570"
+                          class="p-2"
+                          id="carName${rowId}"
+                        />
+                      </div>
+                      <div class="editCarFormInput d-inline-block mx-1">
+                        <label for="carPrice${rowId}">Price:</label>
+                        <br />
+                        <input
+                          type="number"
+                          placeholder="Lexus-LX570"
+                          class="p-2"
+                          id="carPrice${rowId}"
+                        />
+                      </div>
+                      <div class="editCarFormInput d-inline-block mx-1">
+                        <label for="carMileage${rowId}">Mileage:</label>
+                        <br />
+                        <input
+                          type="number"
+                          placeholder="Lexus-LX570"
+                          class="p-2"
+                          id="carMileage${rowId}"
+                        />
+                      </div>
+                      <div class="editCarFormInput mx-1 mt-2">
+                        <label for="carDescription${rowId}">Description:</label>
+                        <br />
+                        <textarea
+                          name="carDescription"
+                          id="carDescription${rowId}"
+                          rows="4"
+                          class="w-100 p-2"
+                          placeholder=""
+                        ></textarea>
+                      </div>
+                    </div>
+                    <input
+                      type="submit"
+                      value="Finish Editing"
+                      class="green-bg-theme text-white rounded-3"
+                    />
+                  </form>
+                </td>
+              </tr>
+  `;
+  row.insertAdjacentHTML("afterend", formHTML);
+  function editCar(rowId) {
+    const form = document.getElementById(`editCarForm${rowId}`);
+    const carName = form.querySelector(`#carName${rowId}`).value;
+    const carMileage = form.querySelector(`#carMileage${rowId}`).value;
+    const carPrice = form.querySelector(`#carPrice${rowId}`).value;
+    const carNameConfirmed = document.getElementById(
+      `carNameConfirmed${rowId}`
+    );
+    const carMileageConfirmed = document.getElementById(
+      `carMileageConfirmed${rowId}`
+    );
+    const carPriceConfirmed = document.getElementById(
+      `carPriceConfirmed${rowId}`
+    );
+    carNameConfirmed.innerText = carName;
+    carMileageConfirmed.innerText = `${formatNumberWithCommas(carMileage)}km`;
+    carPriceConfirmed.innerText = `NGN${formatNumberWithCommas(carPrice)}`;
+  }
+  document.querySelectorAll(".editCarForm").forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const rowId = form.dataset.rowId;
+      editCar(rowId);
+      form.remove();
+    });
+  });
+}
+
+document.querySelectorAll(".editButton").forEach((button) => {
+  button.addEventListener("click", function () {
+    const rowId = button.dataset.rowId;
+    appendFormToRow(rowId);
+  });
+});
+
+function formatNumberWithCommas(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
