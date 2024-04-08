@@ -116,8 +116,87 @@
             >
           </div>
         </div>
-        <div class="px-4 px-lg-5 d-none pt-5" id="listNewCarModal"></div>
-        <div class="px-4 px-lg-5 pt-5" id="editCarsModal">
+        <div class="px-4 px-lg-5 d-none pt-5" id="listNewCarModal">
+          <div class="row centered-form">
+            <div class="col-md-12">
+              <div class="card border-0">
+                <div class="card-body">
+                  <h1 class="fs-3 poppins-semibold pb-2">List New Car</h1>
+                  <form class="text-start" id="listCarForm">
+                    <div class="form-group mb-2">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter car name"
+                      />
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="year">Year</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="year"
+                        placeholder="Enter year"
+                      />
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="color">Color</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="color"
+                        placeholder="Enter car color"
+                      />
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="mileage">Mileage</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="mileage"
+                        placeholder="Enter car mileage"
+                      />
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="price">Price</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="price"
+                        placeholder="Enter car price"
+                      />
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="transmission">Transmission</label>
+                      <select class="form-control" id="transmission">
+                        <option value="automatic">Automatic</option>
+                        <option value="manual">Manual</option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="description">Description</label>
+                      <textarea
+                        class="form-control"
+                        id="description"
+                        placeholder="Enter description"
+                        rows="5"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block mt-3 px-5"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 px-lg-5 pt-5 d-none" id="editCarsModal">
           <h1 class="fs-3 poppins-semibold">Edit cars</h1>
           <div class="text-center mt-4">
             <p class="poppins-semibold">
@@ -146,10 +225,18 @@
             <tbody>
               <tr id="carRow1">
                 <td class="poppins-regular pb-4" id="carId1">1</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed1">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed1">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed1">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed1">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed1">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed1">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed1">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed1">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -167,10 +254,18 @@
               </tr>
               <tr id="carRow2">
                 <td class="poppins-regular pb-4" id="carId2">2</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed2">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed2">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed2">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed2">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed2">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed2">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed2">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed2">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -188,10 +283,18 @@
               </tr>
               <tr id="carRow3">
                 <td class="poppins-regular pb-4" id="carId3">3</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed3">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed3">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed3">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed3">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed3">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed3">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed3">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed3">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -209,10 +312,18 @@
               </tr>
               <tr id="carRow4">
                 <td class="poppins-regular pb-4" id="carId4">4</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed4">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed4">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed4">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed4">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed4">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed4">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed4">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed4">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -230,10 +341,18 @@
               </tr>
               <tr id="carRow5">
                 <td class="poppins-regular pb-4" id="carId5">5</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed5">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed5">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed5">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed5">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed5">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed5">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed5">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed5">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -248,13 +367,21 @@
                     >Delete</a
                   >
                 </td>
-              </tr>              
+              </tr>
               <tr id="carRow6">
                 <td class="poppins-regular pb-4" id="carId6">6</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed6">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed6">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed6">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed6">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed6">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed6">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed6">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed6">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -272,10 +399,18 @@
               </tr>
               <tr id="carRow7">
                 <td class="poppins-regular pb-4" id="carId7">7</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed7">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed7">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed7">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed7">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed7">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed7">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed7">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed7">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -290,13 +425,21 @@
                     >Delete</a
                   >
                 </td>
-              </tr>              
+              </tr>
               <tr id="carRow8">
                 <td class="poppins-regular pb-4" id="carId8">8</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed8">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed8">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed8">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed8">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed8">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed8">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed8">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed8">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -311,13 +454,21 @@
                     >Delete</a
                   >
                 </td>
-              </tr>              
+              </tr>
               <tr id="carRow9">
                 <td class="poppins-regular pb-4" id="carId9">9</td>
-                <td class="poppins-regular pb-4" id="carNameConfirmed9">Lexus LX570</td>
-                <td class="poppins-regular pb-4" id="carColourConfirmed9">Black</td>
-                <td class="poppins-regular pb-4" id="carMileageConfirmed9">10,050km</td>
-                <td class="poppins-regular pb-4" id="carPriceConfirmed9">NGN20,000</td>
+                <td class="poppins-regular pb-4" id="carNameConfirmed9">
+                  Lexus LX570
+                </td>
+                <td class="poppins-regular pb-4" id="carColourConfirmed9">
+                  Black
+                </td>
+                <td class="poppins-regular pb-4" id="carMileageConfirmed9">
+                  10,050km
+                </td>
+                <td class="poppins-regular pb-4" id="carPriceConfirmed9">
+                  NGN20,000
+                </td>
                 <td class="poppins-regular pb-4" id="">
                   <a
                     role="button"
@@ -336,7 +487,7 @@
             </tbody>
           </table>
         </div>
-        <div id="dashy" class="d-none">
+        <div id="dashy">
           <div id="mainDashboard" class="px-4 px-lg-5">
             <h1 class="poppins-semibold fs-3 pt-4">
               Welcome Back,
@@ -468,6 +619,157 @@
           </div>
           <div id="carInventory" class="px-4 px-lg-5">
             <h5 class="grey-theme pt-5 poppins-semibold">Car Inventory</h5>
+            <table class="w-100 text-center my-4">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="pb-3">Id</th>
+                  <th class="pb-3">Car Name</th>
+                  <th class="pb-3">Color</th>
+                  <th class="pb-3">Mileage</th>
+                  <th class="pb-3">Price</th>
+                  <th class="pb-3">Buys</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">1</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">2</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">3</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">4</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>                
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">5</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>                
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">6</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">7</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">8</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+                <tr>
+                  <td class="pb-4">
+                    <img
+                      src="images/Lexus-LX570-Bnr.jpg"
+                      height="50px"
+                      class="rounded-3"
+                    />
+                  </td>
+                  <td class="poppins-regular pb-4">9</td>
+                  <td class="poppins-regular pb-4">Lexus LX570</td>
+                  <td class="poppins-regular pb-4">Black</td>
+                  <td class="poppins-regular pb-4">10,050km</td>
+                  <td class="poppins-regular pb-4">NGN20,000</td>
+                  <td class="poppins-regular pb-4">370</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 
             <div class="row m-0 justify-content-between">
               <div
                 class="card profile-card px-3 border-0 p-0 px-2 col-12 col-lg-4 rounded-5 text-end my-3"
@@ -682,7 +984,7 @@
                 class="green-bg-theme text-white p-2 rounded-3 text-decoration-none"
                 >View all</a
               >
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

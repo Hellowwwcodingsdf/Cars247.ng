@@ -139,11 +139,13 @@ window.addEventListener("scroll", () => {
 listCarBtn.addEventListener("click", () => {
   listNewCarModal.classList.remove("d-none");
   dashy.classList.add("d-none");
+  window.scrollTo(0, 0);
 });
 
 editCarsBtn.addEventListener("click", () => {
   editCarsModal.classList.remove("d-none");
   dashy.classList.add("d-none");
+  window.scrollTo(0, 0);
 });
 
 function appendFormToRow(rowId) {
