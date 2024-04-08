@@ -17,6 +17,7 @@ let listNewCarModal = document.getElementById("listNewCarModal");
 let editCarsModal = document.getElementById("editCarsModal");
 let dashy = document.getElementById("dashy");
 let editCar1 = document.getElementById("editCar1");
+let listCarForm = document.getElementById("listCarForm")
 
 //Bring out dropdown when profile picture is clicked
 imgDropdown.addEventListener("click", () => {
@@ -248,3 +249,7 @@ document.querySelectorAll(".editButton").forEach((button) => {
 function formatNumberWithCommas(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+listCarForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+})
