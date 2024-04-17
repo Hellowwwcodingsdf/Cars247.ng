@@ -17,16 +17,7 @@ let listNewCarModal = document.getElementById("listNewCarModal");
 let editCarsModal = document.getElementById("editCarsModal");
 let dashy = document.getElementById("dashy");
 let editCar1 = document.getElementById("editCar1");
-let listCarForm = document.getElementById("listCarForm")
-
-//Bring out dropdown when profile picture is clicked
-imgDropdown.addEventListener("click", () => {
-  if (dropdownMenu.style.display === "none") {
-    dropdownMenu.style.display = "inline-block";
-  } else {
-    dropdownMenu.style.display = "none";
-  }
-});
+let listCarForm = document.getElementById("listCarForm");
 
 //Navbar should minimize when the button is clicked and maximize if it is clicked again
 closeNavBtn.addEventListener("click", () => {
@@ -149,100 +140,125 @@ editCarsBtn.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
 
-function appendFormToRow(rowId) {
-  const row = document.getElementById(`carRow${rowId}`);
-  document.querySelectorAll(".editCarForm").forEach((form) => {
-    form.remove();
+function appendFormToRow() {
+  // const row = document.getElementById(`carRow${rowId}`);
+  document.querySelectorAll(".editCarModal").forEach((modal) => {
+    modal.remove();
   });
-  const formHTML = `
-              <tr>
-                <td colspan="6" class="w-100">
-                  <form class="editCarForm" id="editCarForm${rowId}" data-row-id="${rowId}">
-                    <div class="text-start">
-                      <div class="editCarFormInput d-inline-block mx-1">
-                        <label for="carName${rowId}">Name:</label>
-                        <br />
-                        <input
-                          type="text"
-                          placeholder="Lexus LX570"
-                          class="p-2"
-                          id="carName${rowId}"
-                        />
-                      </div>
-                      <div class="editCarFormInput d-inline-block mx-1">
-                        <label for="carPrice${rowId}">Price:</label>
-                        <br />
-                        <input
-                          type="number"
-                          placeholder="Lexus-LX570"
-                          class="p-2"
-                          id="carPrice${rowId}"
-                        />
-                      </div>
-                      <div class="editCarFormInput d-inline-block mx-1">
-                        <label for="carMileage${rowId}">Mileage:</label>
-                        <br />
-                        <input
-                          type="number"
-                          placeholder="Lexus-LX570"
-                          class="p-2"
-                          id="carMileage${rowId}"
-                        />
-                      </div>
-                      <div class="editCarFormInput mx-1 mt-2">
-                        <label for="carDescription${rowId}">Description:</label>
-                        <br />
-                        <textarea
-                          name="carDescription"
-                          id="carDescription${rowId}"
-                          rows="4"
-                          class="w-100 p-2"
-                          placeholder=""
-                        ></textarea>
-                      </div>
-                    </div>
-                    <input
-                      type="submit"
-                      value="Finish Editing"
-                      class="green-bg-theme text-white rounded-3"
-                    />
-                  </form>
-                </td>
-              </tr>
-  `;
-  row.insertAdjacentHTML("afterend", formHTML);
-  function editCar(rowId) {
-    const form = document.getElementById(`editCarForm${rowId}`);
-    const carName = form.querySelector(`#carName${rowId}`).value;
-    const carMileage = form.querySelector(`#carMileage${rowId}`).value;
-    const carPrice = form.querySelector(`#carPrice${rowId}`).value;
-    const carNameConfirmed = document.getElementById(
-      `carNameConfirmed${rowId}`
-    );
-    const carMileageConfirmed = document.getElementById(
-      `carMileageConfirmed${rowId}`
-    );
-    const carPriceConfirmed = document.getElementById(
-      `carPriceConfirmed${rowId}`
-    );
-    carNameConfirmed.innerText = carName;
-    carMileageConfirmed.innerText = `${formatNumberWithCommas(carMileage)}km`;
-    carPriceConfirmed.innerText = `NGN${formatNumberWithCommas(carPrice)}`;
-  }
-  document.querySelectorAll(".editCarForm").forEach((form) => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const rowId = form.dataset.rowId;
-      editCar(rowId);
-      form.remove();
+
+  const formHTML = document.createElement("div")
+  formHTML.className =
+    "editCarModal mx-auto align-items-center justify-content-center";
+  formHTML.tabIndex = "-1"
+  formHTML.innerHTML = `
+      <div class="modal-dialog modal-dialog-centered rounded-5 py-4">
+        <div class="modal-content">
+          <div class="modal-header px-5 pb-4 justify-content-between">
+            <h5 class="modal-title poppins-semibold fs-4">Edit Car</h5>
+            <i
+              class="fa-solid fa-xmark fs-2"
+              role="button"
+              id="closeEditModal"
+            ></i>
+          </div>
+          <div class="modal-body">
+            <form class="editCarForm px-5" id="editCarForm">
+              <div class="text-start">
+                <div class="editCarFormInput d-inline-block me-3 mb-2">
+                  <label for="carName">Name:</label>
+                  <br />
+                  <input
+                    type="text"
+                    placeholder="Lexus LX570"
+                    class="p-2"
+                    id="carName"
+                  />
+                </div>
+                <div class="editCarFormInput d-inline-block me-3 mb-2">
+                  <label for="carPrice">Price:</label>
+                  <br />
+                  <input
+                    type="number"
+                    placeholder="Lexus-LX570"
+                    class="p-2"
+                    id="carPrice"
+                  />
+                </div>
+                <div class="editCarFormInput d-inline-block me-3 mb-2">
+                  <label for="carMileage">Mileage:</label>
+                  <br />
+                  <input
+                    type="number"
+                    placeholder="Lexus-LX570"
+                    class="p-2"
+                    id="carMileage"
+                  />
+                </div>
+                <div class="editCarFormInput mx-1 my-2">
+                  <label for="carDescription">Description:</label>
+                  <br />
+                  <textarea
+                    name="carDescription"
+                    id="carDescription"
+                    rows="4"
+                    class="w-100 p-2"
+                    placeholder=""
+                  ></textarea>
+                </div>
+              </div>
+              <input
+                type="submit"
+                value="Finish Editing"
+                class="green-bg-theme text-white rounded-3"
+              />
+            </form>
+          </div>
+        </div>
+      </div>`;
+  editCarsModal.append(formHTML)
+
+  console.log("inserted form modal");
+
+  document.getElementById("closeEditModal").addEventListener("click", () => {
+    document.querySelectorAll(".editCarModal").forEach((modal) => {
+      modal.remove();
     });
+    console.log("removed modal");
   });
+  console.log("added event listener to modal")
+
+  // function editCar(rowId) {
+  //   const form = document.getElementById(`editCarForm${rowId}`);
+  //   const carName = form.querySelector(`#carName${rowId}`).value;
+  //   const carMileage = form.querySelector(`#carMileage${rowId}`).value;
+  //   const carPrice = form.querySelector(`#carPrice${rowId}`).value;
+  //   const carNameConfirmed = document.getElementById(
+  //     `carNameConfirmed${rowId}`
+  //   );
+  //   const carMileageConfirmed = document.getElementById(
+  //     `carMileageConfirmed${rowId}`
+  //   );
+  //   const carPriceConfirmed = document.getElementById(
+  //     `carPriceConfirmed${rowId}`
+  //   );
+  //   carNameConfirmed.innerText = carName;
+  //   carMileageConfirmed.innerText = `${formatNumberWithCommas(carMileage)}km`;
+  //   carPriceConfirmed.innerText = `NGN${formatNumberWithCommas(carPrice)}`;
+  // }
+  // document.querySelectorAll(".editCarForm").forEach((form) => {
+  //   form.addEventListener("submit", function (e) {
+  //     e.preventDefault();
+  //     const rowId = form.dataset.rowId;
+  //     editCar(rowId);
+  //     form.remove();
+  //   });
+  // });
+
 }
 
 document.querySelectorAll(".editButton").forEach((button) => {
   button.addEventListener("click", function () {
-    const rowId = button.dataset.rowId;
-    appendFormToRow(rowId);
+    appendFormToRow()
   });
 });
 
@@ -250,6 +266,6 @@ function formatNumberWithCommas(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-listCarForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-})
+listCarForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
