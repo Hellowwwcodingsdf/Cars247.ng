@@ -1,23 +1,24 @@
-let closeNavBtn = document.getElementById("close-nav-btn");
-let sideBar = document.getElementById("sidebar");
-let dashboard = document.getElementById("dashboard");
-let sideBarElements = document.getElementsByClassName("sideBarElement");
-let dashboardNavLinks = document.querySelectorAll(".nav-links-2");
-let dashboardLink = document.getElementById("dashboardLink");
-let salesHistoryLink = document.getElementById("salesHistoryLink");
-let carInventoryLink = document.getElementById("carInventoryLink");
-let navLogoBlack = document.getElementById("nav-logo-black");
-let navBtnBlack = document.getElementById("navBtnBlack");
-let xMark = document.getElementById("xMark");
-let imgDropdown = document.getElementById("imgDropdown");
-let dropdownMenu = document.getElementById("dropdownMenu");
-let listCarBtn = document.getElementById("listCarBtn");
-let editCarsBtn = document.getElementById("editCarInventory");
-let listNewCarModal = document.getElementById("listNewCarModal");
-let editCarsModal = document.getElementById("editCarsModal");
-let dashy = document.getElementById("dashy");
-let editCar1 = document.getElementById("editCar1");
-let listCarForm = document.getElementById("listCarForm");
+const closeNavBtn = document.getElementById("close-nav-btn");
+const sideBar = document.getElementById("sidebar");
+const dashboard = document.getElementById("dashboard");
+const sideBarElements = document.getElementsByClassName("sideBarElement");
+const dashboardNavLinks = document.querySelectorAll(".nav-links-2");
+const dashboardLink = document.getElementById("dashboardLink");
+const salesHistoryLink = document.getElementById("salesHistoryLink");
+const carInventoryLink = document.getElementById("carInventoryLink");
+const navLogoBlack = document.getElementById("nav-logo-black");
+const navBtnBlack = document.getElementById("navBtnBlack");
+const xMark = document.getElementById("xMark");
+const imgDropdown = document.getElementById("imgDropdown");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const listCarBtn = document.getElementById("listCarBtn");
+const editCarsBtn = document.getElementById("editCarInventory");
+const listNewCarModal = document.getElementById("listNewCarModal");
+const editCarsModal = document.getElementById("editCarsModal");
+const dashy = document.getElementById("dashy");
+const editCar1 = document.getElementById("editCar1");
+const listCarForm = document.getElementById("listCarForm");
+const carAPI = "https://localhost:7116/api/Cars";
 
 //Navbar should minimize when the button is clicked and maximize if it is clicked again
 closeNavBtn.addEventListener("click", () => {
@@ -146,10 +147,10 @@ function appendFormToRow() {
     modal.remove();
   });
 
-  const formHTML = document.createElement("div")
+  const formHTML = document.createElement("div");
   formHTML.className =
     "editCarModal mx-auto align-items-center justify-content-center";
-  formHTML.tabIndex = "-1"
+  formHTML.tabIndex = "-1";
   formHTML.innerHTML = `
       <div class="modal-dialog modal-dialog-centered rounded-5 py-4">
         <div class="modal-content">
@@ -215,7 +216,7 @@ function appendFormToRow() {
           </div>
         </div>
       </div>`;
-  editCarsModal.append(formHTML)
+  editCarsModal.append(formHTML);
 
   console.log("inserted form modal");
 
@@ -225,7 +226,7 @@ function appendFormToRow() {
     });
     console.log("removed modal");
   });
-  console.log("added event listener to modal")
+  console.log("added event listener to modal");
 
   // function editCar(rowId) {
   //   const form = document.getElementById(`editCarForm${rowId}`);
@@ -253,12 +254,11 @@ function appendFormToRow() {
   //     form.remove();
   //   });
   // });
-
 }
 
 document.querySelectorAll(".editButton").forEach((button) => {
   button.addEventListener("click", function () {
-    appendFormToRow()
+    appendFormToRow();
   });
 });
 
@@ -266,6 +266,41 @@ function formatNumberWithCommas(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-listCarForm.addEventListener("submit", (e) => {
+listCarForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+  let newName = document.getElementById("name").value;
+  let newYear = document.getElementById("year").value;
+  let newColour = document.getElementById("color").value;
+  let newMileage = document.getElementById("mileage").value;
+  let newPrice = document.getElementById("price").value;
+  let newTransmission;
+  if (document.getElementById("transmission").selectedIndex === 0) {
+    newTransmission = "Automatic";
+  } else if (document.getElementById("transmission").selectedIndex === 1) {
+    newTransmission = "Manual";
+  }
+  let newDescription = document.getElementById("name").value;
+  let newCar = {
+    name: `${newName}`,
+    year: newYear,
+    colour: `${newColour}`,
+    mileage: newMileage,
+    price: newPrice,
+    transmission: `${newTransmission}`,
+    features: `${newDescription}`,
+    imageUrl:
+      "../images/carousel/car1.png, ../images/carousel/car2.png, ../images/carousel/car3.png",
+    isAvailable: true,
+  };
+  const response = await fetch(carAPI, {
+    method: "POST",
+    headers: {
+      Accept: "*",
+      "Content-Type": "application/json",
+      "User-Agent": "Custom-User-Agent/1.0",
+    },
+    body: newCar,
+  });
+  const data = response.json();
+  console.log(data);
 });
