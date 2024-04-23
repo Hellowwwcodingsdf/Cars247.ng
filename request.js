@@ -1,15 +1,8 @@
-carsApi = "https://moccasin-causal-hagfish.ngrok-free.app/api/Cars";
+carsApi = "https://localhost:7116/api/Cars";
 
 const fetchCars = async () => {
   try {
-    const response = await fetch(carsApi, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        "User-Agent": "Custom-User-Agent/1.0",
-      },
-    });
+    const response = await fetch(carsApi);
     console.log(response)
     if (!response.ok) {
       throw new Error("Unable to connect to API");
