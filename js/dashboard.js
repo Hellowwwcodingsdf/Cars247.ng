@@ -228,32 +228,6 @@ function appendFormToRow() {
   });
   console.log("added event listener to modal");
 
-  // function editCar(rowId) {
-  //   const form = document.getElementById(`editCarForm${rowId}`);
-  //   const carName = form.querySelector(`#carName${rowId}`).value;
-  //   const carMileage = form.querySelector(`#carMileage${rowId}`).value;
-  //   const carPrice = form.querySelector(`#carPrice${rowId}`).value;
-  //   const carNameConfirmed = document.getElementById(
-  //     `carNameConfirmed${rowId}`
-  //   );
-  //   const carMileageConfirmed = document.getElementById(
-  //     `carMileageConfirmed${rowId}`
-  //   );
-  //   const carPriceConfirmed = document.getElementById(
-  //     `carPriceConfirmed${rowId}`
-  //   );
-  //   carNameConfirmed.innerText = carName;
-  //   carMileageConfirmed.innerText = `${formatNumberWithCommas(carMileage)}km`;
-  //   carPriceConfirmed.innerText = `NGN${formatNumberWithCommas(carPrice)}`;
-  // }
-  // document.querySelectorAll(".editCarForm").forEach((form) => {
-  //   form.addEventListener("submit", function (e) {
-  //     e.preventDefault();
-  //     const rowId = form.dataset.rowId;
-  //     editCar(rowId);
-  //     form.remove();
-  //   });
-  // });
 }
 
 document.querySelectorAll(".editButton").forEach((button) => {
@@ -268,39 +242,50 @@ function formatNumberWithCommas(number) {
 
 listCarForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  let newName = document.getElementById("name").value;
-  let newYear = document.getElementById("year").value;
-  let newColour = document.getElementById("color").value;
-  let newMileage = document.getElementById("mileage").value;
-  let newPrice = document.getElementById("price").value;
-  let newTransmission;
-  if (document.getElementById("transmission").selectedIndex === 0) {
-    newTransmission = "Automatic";
-  } else if (document.getElementById("transmission").selectedIndex === 1) {
-    newTransmission = "Manual";
+  try {
+    let newName = document.getElementById("name").value;
+    let newYear = document.getElementById("year").value;
+    let newColour = document.getElementById("color").value;
+    let newMileage = document.getElementById("mileage").value;
+    let newPrice = document.getElementById("price").value;
+    let newTransmission;
+    if (document.getElementById("transmission").selectedIndex === 0) {
+      newTransmission = "Automatic";
+    } else if (document.getElementById("transmission").selectedIndex === 1) {
+      newTransmission = "Manual";
+    }
+    let newDescription = document.getElementById("name").value;
+    let carCreate = JSON.stringify({
+      "name": newName,
+      "year": newYear,
+      "colour": newColour,
+      "mileage": newMileage,
+      "price": newPrice,
+      "transmission": newTransmission,
+      "features": newDescription,
+      "imageUrl":
+        "../images/carousel/car1.png, ../images/carousel/car2.png, ../images/carousel/car3.png",
+      "isAvailable": true,
+    })
+    console.log(carCreate)
+    const response = await fetch(carAPI, {
+      method: "POST",
+      headers: {
+        Accept: "*",
+        "Content-Type": "application/json",
+        "User-Agent": "Custom-User-Agent/1.0",
+      },
+      body: carCreate,
+    });
+    if(response.ok){
+      alert("New Car " + newName + " has been added")
+      listNewCarModal.classList.add("d-none");
+      dashy.classList.remove("d-none");
+      window.scrollTo(0, 0);
+    }
+    const data = response.json();
+    console.log(data);
+  } catch(error){
+    console.error(error)
   }
-  let newDescription = document.getElementById("name").value;
-  let newCar = {
-    name: `${newName}`,
-    year: newYear,
-    colour: `${newColour}`,
-    mileage: newMileage,
-    price: newPrice,
-    transmission: `${newTransmission}`,
-    features: `${newDescription}`,
-    imageUrl:
-      "../images/carousel/car1.png, ../images/carousel/car2.png, ../images/carousel/car3.png",
-    isAvailable: true,
-  };
-  const response = await fetch(carAPI, {
-    method: "POST",
-    headers: {
-      Accept: "*",
-      "Content-Type": "application/json",
-      "User-Agent": "Custom-User-Agent/1.0",
-    },
-    body: newCar,
-  });
-  const data = response.json();
-  console.log(data);
 });
